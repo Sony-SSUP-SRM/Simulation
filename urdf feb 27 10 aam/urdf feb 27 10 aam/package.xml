@@ -1,0 +1,21 @@
+<package format="2">
+  <name>urdf feb 27 10 aam</name>
+  <version>1.0.0</version>
+  <description>
+    <p>URDF Description package for urdf feb 27 10 aam</p>
+    <p>This package contains configuration data, 3D models and launch files
+for urdf feb 27 10 aam robot</p>
+  </description>
+  <author>TODO</author>
+  <maintainer email="TODO@email.com" />
+  <license>BSD</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roslaunch</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>rviz</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>gazebo</depend>
+  <export>
+    <architecture_independent />
+  </export>
+</package>

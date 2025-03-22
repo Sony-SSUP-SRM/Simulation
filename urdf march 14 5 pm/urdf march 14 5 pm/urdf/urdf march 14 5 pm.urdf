@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="urdf march 14 5 pm">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0341048176202521 -0.0854022801942358 0.112184795428881"
+        rpy="0 0 0" />
+      <mass
+        value="0.770945367382026" />
+      <inertia
+        ixx="0.00273358105534265"
+        ixy="-2.07339807416304E-06"
+        ixz="-3.6504790706455E-06"
+        iyy="0.00513194515572194"
+        iyz="-7.3744966419124E-05"
+        izz="0.00619154781631375" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="arm right">
+    <inertial>
+      <origin
+        xyz="0.147693755620292 -0.0307034723234414 -0.0458663364363569"
+        rpy="0 0 0" />
+      <mass
+        value="0.926238295178665" />
+      <inertia
+        ixx="0.0032671185422839"
+        ixy="0.00345556365717496"
+        ixz="-0.000184383716541316"
+        iyy="0.0199402950095604"
+        iyz="3.84408530599079E-05"
+        izz="0.0200980418876309" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/arm right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/arm right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch1_1"
+    type="revolute">
+    <origin
+      xyz="0.129094368056422 -0.0605160670373923 0.114827219918103"
+      rpy="-1.5707963267949 0.155376521193421 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm right" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel2_1">
+    <inertial>
+      <origin
+        xyz="0.047760700796397 -0.000473376384485746 -0.0632795010326599"
+        rpy="0 0 0" />
+      <mass
+        value="0.14809674935793" />
+      <inertia
+        ixx="0.000102379878238783"
+        ixy="-1.22197314763427E-05"
+        ixz="-1.68025630456076E-06"
+        iyy="0.000187907888373725"
+        iyz="1.19957588949106E-05"
+        izz="0.000102317709183706" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/wheel2_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/wheel2_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll2_1"
+    type="revolute">
+    <origin
+      xyz="0.398300525253841 -0.00732850455591963 -0.059842422751485"
+      rpy="3.14159265358979 0.7761492821391 -1.5707963267949" />
+    <parent
+      link="arm right" />
+    <child
+      link="wheel2_1" />
+    <axis
+      xyz="0.137448148765483 -0.981275802189932 -0.134928894005126" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm left">
+    <inertial>
+      <origin
+        xyz="0.0837032855426187 0.127701563962862 -0.0854762273206825"
+        rpy="0 0 0" />
+      <mass
+        value="0.934896875307156" />
+      <inertia
+        ixx="0.0156201593013683"
+        ixy="-0.00836153097743561"
+        ixz="-0.000111612538948277"
+        iyy="0.00800502818283903"
+        iyz="-0.00017056045782221"
+        izz="0.0204248713539629" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/arm left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/arm left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch1_2"
+    type="revolute">
+    <origin
+      xyz="-0.0609056319435783 -0.032516092037392 0.114827219918103"
+      rpy="1.5707963267949 0.963061067969326 -3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm left" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel2_2">
+    <inertial>
+      <origin
+        xyz="-0.295787810575174 0.104773090790362 0.181203468170097"
+        rpy="0 0 0" />
+      <mass
+        value="0.148096749357929" />
+      <inertia
+        ixx="0.00014740423663835"
+        ixy="3.50759667167694E-05"
+        ixz="-2.86310746498393E-05"
+        iyy="0.000126993219737585"
+        iyz="-2.14879944042932E-05"
+        izz="0.000118208019420278" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/wheel2_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/wheel2_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll2_2"
+    type="revolute">
+    <origin
+      xyz="0.330776432232011 -0.0073285045559196 -0.0878423977514851"
+      rpy="3.14159265358979 0.549642206871802 -1.5707963267949" />
+    <parent
+      link="arm left" />
+    <child
+      link="wheel2_2" />
+    <axis
+      xyz="-0.718223926858589 -0.539036410966623 0.439993339199641" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="camera link">
+    <inertial>
+      <origin
+        xyz="0.0750000000000005 0.00740660654895053 -0.375458448797212"
+        rpy="0 0 0" />
+      <mass
+        value="0.0698816348006092" />
+      <inertia
+        ixx="0.000124456436337246"
+        ixy="5.54148528710524E-19"
+        ixz="1.15304684072782E-19"
+        iyy="0.000286322250421284"
+        iyz="5.67768286071316E-05"
+        izz="0.000324063844446407" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/camera link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/camera link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch3_1"
+    type="revolute">
+    <origin
+      xyz="0.349275314195647 0 -0.00950000000000037"
+      rpy="1.23269270214181 1.5707963267949 0" />
+    <parent
+      link="arm left" />
+    <child
+      link="camera link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheelcentre1">
+    <inertial>
+      <origin
+        xyz="-6.93889390390723E-18 -5.55111512312578E-17 0.00499999999998527"
+        rpy="0 0 0" />
+      <mass
+        value="0.162184720741573" />
+      <inertia
+        ixx="0.000219883669596311"
+        ixy="5.9292306307801E-21"
+        ixz="2.3028350281132E-22"
+        iyy="0.000219883669596311"
+        iyz="2.26054340074541E-23"
+        izz="0.000436921907036522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/wheelcentre1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/wheelcentre1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll1_1"
+    type="revolute">
+    <origin
+      xyz="0.0339714708239965 -0.00951609203739177 0.114827219918101"
+      rpy="1.5707963267949 0.0642886543637993 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheelcentre1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheelcentre2">
+    <inertial>
+      <origin
+        xyz="0 -2.77555756156289E-17 0.00499999999998529"
+        rpy="0 0 0" />
+      <mass
+        value="0.162184720741573" />
+      <inertia
+        ixx="0.000219883669596311"
+        ixy="6.7762635780344E-21"
+        ixz="-5.42049942532151E-23"
+        iyy="0.000219883669596311"
+        iyz="4.70651748977798E-23"
+        izz="0.000436921907036522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/wheelcentre2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf march 14 5 pm/meshes/wheelcentre2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll1_2"
+    type="revolute">
+    <origin
+      xyz="0.0339714708239965 -0.191516092037393 0.114827219918102"
+      rpy="1.5707963267949 0.130854466309513 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheelcentre2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

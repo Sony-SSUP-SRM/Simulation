@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="urdf feb 27 10 aam">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0341048176202521 0.112184795428881 0.0854022801942358"
+        rpy="0 0 0" />
+      <mass
+        value="0.770945367382027" />
+      <inertia
+        ixx="0.00273358105534265"
+        ixy="-3.65047907064546E-06"
+        ixz="2.07339807416297E-06"
+        iyy="0.00619154781631375"
+        iyz="7.37449664191245E-05"
+        izz="0.00513194515572194" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf feb 27 10 aam/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf feb 27 10 aam/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right arm">
+    <inertial>
+      <origin
+        xyz="0.0610331123174011 -0.0120587823345024 0.177819724519007"
+        rpy="0 0 0" />
+      <mass
+        value="3.51528197503804" />
+      <inertia
+        ixx="0.0484541240686353"
+        ixy="-4.37936519842678E-05"
+        ixz="0.000645784534085394"
+        iyy="0.0507626975814893"
+        iyz="0.00302868230132721"
+        izz="0.00630690627460051" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf feb 27 10 aam/meshes/right arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf feb 27 10 aam/meshes/right arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch1"
+    type="revolute">
+    <origin
+      xyz="0.12909 -0.060516 0.11483"
+      rpy="-1.63 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="right arm" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rightwheel">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 -0.0110613871523054 9.71445146547012E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.148096749357929" />
+      <inertia
+        ixx="0.000100668249901381"
+        ixy="-1.18343401380527E-20"
+        ixz="-3.3881317890172E-21"
+        iyy="0.00019126897599345"
+        iyz="2.68584452072793E-20"
+        izz="0.000100668249901381" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf feb 27 10 aam/meshes/rightwheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf feb 27 10 aam/meshes/rightwheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll2_1"
+    type="revolute">
+    <origin
+      xyz="0.06 -0.026168 0.38587"
+      rpy="-1.5557 0.066017 -1.3463" />
+    <parent
+      link="right arm" />
+    <child
+      link="rightwheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left arm">
+    <inertial>
+      <origin
+        xyz="0.0610331123174011 0.0120587823345029 -0.177819724519008"
+        rpy="0 0 0" />
+      <mass
+        value="3.51528197503804" />
+      <inertia
+        ixx="0.0484541240686352"
+        ixy="4.37936519842689E-05"
+        ixz="-0.000645784534085392"
+        iyy="0.0507626975814892"
+        iyz="0.00302868230132734"
+        izz="0.00630690627460052" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf feb 27 10 aam/meshes/left arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf feb 27 10 aam/meshes/left arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch 2"
+    type="revolute">
+    <origin
+      xyz="-0.060906 -0.060516 0.11483"
+      rpy="-1.6309 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="left arm" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leftwheel">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 -0.0107880460786924 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.148096749357929" />
+      <inertia
+        ixx="0.000100668249901381"
+        ixy="3.94929111657318E-20"
+        ixz="9.21116389066112E-24"
+        iyy="0.000191268975993451"
+        iyz="3.02058340617418E-21"
+        izz="0.000100668249901381" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf feb 27 10 aam/meshes/leftwheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf feb 27 10 aam/meshes/leftwheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll2_2"
+    type="revolute">
+    <origin
+      xyz="0.06 0.026525 -0.39114"
+      rpy="1.5708 -0.067711 1.5708" />
+    <parent
+      link="left arm" />
+    <child
+      link="leftwheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="centre wheel 1">
+    <inertial>
+      <origin
+        xyz="0 -2.77555756156289E-17 0.00499999999998529"
+        rpy="0 0 0" />
+      <mass
+        value="0.162184720741573" />
+      <inertia
+        ixx="0.000219883669596311"
+        ixy="6.7762635780344E-21"
+        ixz="-5.42049942532147E-23"
+        iyy="0.000219883669596311"
+        iyz="4.70651748977798E-23"
+        izz="0.000436921907036522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf feb 27 10 aam/meshes/centre wheel 1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf feb 27 10 aam/meshes/centre wheel 1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll1_1"
+    type="revolute">
+    <origin
+      xyz="0.033971 -0.19152 0.11483"
+      rpy="1.5708 0.13085 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="centre wheel 1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="centre wheel2">
+    <inertial>
+      <origin
+        xyz="-6.93889390390723E-18 -5.55111512312578E-17 0.00499999999998527"
+        rpy="0 0 0" />
+      <mass
+        value="0.162184720741573" />
+      <inertia
+        ixx="0.000219883669596311"
+        ixy="2.5410988417629E-21"
+        ixz="2.3028350281132E-22"
+        iyy="0.000219883669596311"
+        iyz="2.26054340074541E-23"
+        izz="0.000436921907036522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf feb 27 10 aam/meshes/centre wheel2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf feb 27 10 aam/meshes/centre wheel2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roll1_2"
+    type="revolute">
+    <origin
+      xyz="0.033971 -0.0095161 0.11483"
+      rpy="1.5708 0.064289 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="centre wheel2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
